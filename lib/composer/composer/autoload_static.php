@@ -2480,6 +2480,7 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'OC\\Template\\Template' => __DIR__ . '/../../..' . '/lib/private/Template/Template.php',
         'OC\\Template\\TemplateFileLocator' => __DIR__ . '/../../..' . '/lib/private/Template/TemplateFileLocator.php',
         'OC\\Template\\TemplateManager' => __DIR__ . '/../../..' . '/lib/private/Template/TemplateManager.php',
+        'OC\\Template\\ViewerPreferenceListener' => __DIR__ . '/../../..' . '/lib/private/Template/ViewerPreferenceListener.php',
         'OC\\TextProcessing\\Db\\Task' => __DIR__ . '/../../..' . '/lib/private/TextProcessing/Db/Task.php',
         'OC\\TextProcessing\\Db\\TaskMapper' => __DIR__ . '/../../..' . '/lib/private/TextProcessing/Db/TaskMapper.php',
         'OC\\TextProcessing\\Manager' => __DIR__ . '/../../..' . '/lib/private/TextProcessing/Manager.php',

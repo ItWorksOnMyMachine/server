@@ -2434,6 +2434,7 @@ return array(
     'OC\\Template\\Template' => $baseDir . '/lib/private/Template/Template.php',
     'OC\\Template\\TemplateFileLocator' => $baseDir . '/lib/private/Template/TemplateFileLocator.php',
     'OC\\Template\\TemplateManager' => $baseDir . '/lib/private/Template/TemplateManager.php',
+    'OC\\Template\\ViewerPreferenceListener' => $baseDir . '/lib/private/Template/ViewerPreferenceListener.php',
     'OC\\TextProcessing\\Db\\Task' => $baseDir . '/lib/private/TextProcessing/Db/Task.php',
     'OC\\TextProcessing\\Db\\TaskMapper' => $baseDir . '/lib/private/TextProcessing/Db/TaskMapper.php',
     'OC\\TextProcessing\\Manager' => $baseDir . '/lib/private/TextProcessing/Manager.php',

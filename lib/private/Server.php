@@ -151,6 +151,7 @@ use OC\Talk\Broker;
 use OC\Teams\TeamManager;
 use OC\Template\JSCombiner;
 use OC\Template\LoadViewerListener;
+use OC\Template\ViewerPreferenceListener;
 use OC\Translation\TranslationManager;
 use OC\User\AvailabilityCoordinator;
 use OC\User\DisplayNameCache;
@@ -182,6 +183,8 @@ use OCP\Collaboration\Resources\IProviderManager;
 use OCP\Command\IBus;
 use OCP\Comments\ICommentsManager;
 use OCP\Comments\ICommentsManagerFactory;
+use OCP\Config\BeforePreferenceDeletedEvent;
+use OCP\Config\BeforePreferenceSetEvent;
 use OCP\Config\IUserConfig;
 use OCP\Contacts\ContactsMenu\IActionFactory;
 use OCP\Contacts\ContactsMenu\IContactsStore;
@@ -1143,6 +1146,8 @@ class Server extends ServerContainer {
 		$eventDispatcher->addServiceListener(UserDeletedEvent::class, SubAdmin::class);
 		$eventDispatcher->addServiceListener(GroupDeletedEvent::class, SubAdmin::class);
 		$eventDispatcher->addServiceListener(BeforeTemplateRenderedEvent::class, LoadViewerListener::class);
+		$eventDispatcher->addServiceListener(BeforePreferenceSetEvent::class, ViewerPreferenceListener::class);
+		$eventDispatcher->addServiceListener(BeforePreferenceDeletedEvent::class, ViewerPreferenceListener::class);
 		$eventDispatcher->addServiceListener(UserLoggedInWithCookieEvent::class, UserLoggedInWithCookieListener::class);
 
 		FilesMetadataManager::loadListeners($eventDispatcher);
